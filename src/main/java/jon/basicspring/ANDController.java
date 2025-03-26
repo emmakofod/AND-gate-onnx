@@ -29,7 +29,7 @@ public class ANDController {
     }
 
     String runInference(double a, double b){
-        String modelPath = "/xorPrev.onnx";
+        String modelPath = "/AND.onnx";
         try (InputStream is = ANDController.class.getResourceAsStream(modelPath);
              OrtEnvironment env = OrtEnvironment.getEnvironment()) {
             assert is != null;
@@ -37,7 +37,7 @@ public class ANDController {
             // scaler her...
             float[][] inputData = new float[][]{{(float) a, (float) b}};  // Your input data
             OnnxTensor inputTensor = OnnxTensor.createTensor(env, inputData);
-            OrtSession.Result result = session.run(Collections.singletonMap("dense_input", inputTensor));
+            OrtSession.Result result = session.run(Collections.singletonMap("input", inputTensor));
 
             float[][] output = (float[][]) result.get(0).getValue();
             return "" + Arrays.toString(output[0]);

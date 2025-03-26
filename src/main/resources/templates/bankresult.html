@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Result of Bank customer staying or not</title>
+    <title>Result of Bank Customer Prediction</title>
 </head>
 <body>
-<h1>Result of bank customer prediction:</h1>
-<p th:text="'Creditscore: ' + ${number1}"></p>
-<p th:text="'Age: ' + ${number2}"></p>
-<p th:text="'rest is ommited...'"></p>
+<h1>Result of Bank Customer Prediction:</h1>
 
-<p th:text="'Prediction: ' + ${bankpredic}"></p>
-<a href="/bank">Try again</a>
-<a href="/">Home</a>
+<p th:text="'Credit Score: ' + ${creditScore}"></p>
+<p th:text="'Age: ' + ${age}"></p>
+<p th:text="'Tenure: ' + ${tenure}"></p>
+<p th:text="'Balance: ' + ${balance}"></p>
+<p th:text="'Number of Products: ' + ${numOfProducts}"></p>
+<p th:text="'Has Credit Card: ' + (${hasCrCard} == 1 ? 'Yes' : 'No')"></p>
+<p th:text="'Is Active Member: ' + (${isActiveMember} == 1 ? 'Yes' : 'No')"></p>
+<p th:text="'Estimated Salary: ' + ${estimatedSalary}"></p>
+
+<p>Geography:
+    <span th:if="${geographyFrance} == 1">France</span>
+    <span th:if="${geographyGermany} == 1">Germany</span>
+    <span th:if="${geographySpain} == 1">Spain</span>
+</p>
+
+<p>Gender:
+    <span th:if="${genderFemale} == 1">Female</span>
+    <span th:if="${genderMale} == 1">Male</span>
+</p>
+
+<h2>Prediction:</h2>
+<p th:text="'Raw Model Output: ' + ${predictionRaw}"></p>
+
+<!-- Human-readable interpretation -->
+<p>
+    <strong>Final Prediction: </strong>
+    <span th:if="${prediction} == 1" style="color: red; font-weight: bold;">Customer is likely to leave.</span>
+    <span th:if="${prediction} == 0" style="color: green; font-weight: bold;">Customer is likely to stay.</span>
+</p>
+
+<a href="/bank">Try again</a> | <a href="/">Home</a>
 </body>
 </html>
