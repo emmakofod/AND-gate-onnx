@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Number Input Form</title>
+</head>
+<body>
+<h2>Enter values for the bank customer staying or not:</h2>
+<form action="#" th:action="@{/bank}" method="post">
+    <!--    'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary', 'Geography_France', 'Geography_Germany', 'Geography_Spain', 'Gender_Female', 'Gender_Male'-->
+    <!--    600, 40, 3, 60000, 2, 1, 1, 50000, 1, 0, 0, 0 ,1-->
+    <p>CreditScore: <input type="number" name="number1" required="required" th:value="707" /></p>
+    <p>Age: <input type="number" name="number2" required="required" th:value="51" /></p>
+    <p>Tenure: <input type="number" name="number3" required="required" th:value="10"/></p>
+    <p>Balance: <input type="number" name="number4" required="required" th:value="98438"/></p>
+    <p>NumOfProducts: <input type="number" name="number5" required="required" th:value="1" /></p>
+    <p>HasCrCard: <input type="number" name="number6" required="required" th:value="0"/></p>
+    <p>IsActiveMember: <input type="number" name="number7" required="required" th:value="0"/></p>
+    <p>EstimatedSalary: <input type="number" name="number8" required="required" th:value="70778"/></p>
+    <p>Geography_France: <input type="number" name="number9" required="required" th:value="0"/></p>
+    <p>Geography_Germany: <input type="number" name="number10" required="required" th:value="1"/></p>
+    <p>Geography_Spain: <input type="number" name="number11" required="required" th:value="0"/></p>
+    <p>Gender_Female: <input type="number" name="number12" required="required" th:value="1"/></p>
+    <p>Gender_Male: <input type="number" name="number13" required="required" th:value="0"/></p>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+<form action="#" th:action="@{/bank}" method="post">
+<!--    'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary', 'Geography_France', 'Geography_Germany', 'Geography_Spain', 'Gender_Female', 'Gender_Male'-->
+<!--    600, 40, 3, 60000, 2, 1, 1, 50000, 1, 0, 0, 0 ,1-->
+    <p>CreditScore: <input type="number" name="number1" required="required" th:value="600" /></p>
+    <p>Age: <input type="number" name="number2" required="required" th:value="40" /></p>
+    <p>Tenure: <input type="number" name="number3" required="required" th:value="3"/></p>
+    <p>Balance: <input type="number" name="number4" required="required" th:value="60000"/></p>
+    <p>NumOfProducts: <input type="number" name="number5" required="required" th:value="2" /></p>
+    <p>HasCrCard: <input type="number" name="number6" required="required" th:value="1"/></p>
+    <p>IsActiveMember: <input type="number" name="number7" required="required" th:value="1"/></p>
+    <p>EstimatedSalary: <input type="number" name="number8" required="required" th:value="50000"/></p>
+    <p>Geography_France: <input type="number" name="number9" required="required" th:value="1"/></p>
+    <p>Geography_Germany: <input type="number" name="number10" required="required" th:value="0"/></p>
+    <p>Geography_Spain: <input type="number" name="number11" required="required" th:value="0"/></p>
+    <p>Gender_Female: <input type="number" name="number12" required="required" th:value="0"/></p>
+    <p>Gender_Male: <input type="number" name="number13" required="required" th:value="1"/></p>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>

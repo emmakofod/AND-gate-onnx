@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+</head>
+<body>
+<h1>Result of XOR prediction:</h1>
+<p th:text="'Number 1: ' + ${number1}"></p>
+<p th:text="'Number 2: ' + ${number2}"></p>
+<p th:text="'Prediction: ' + ${prediction}"></p>
+<a href="/numbers">Try again</a>
+<a href="/">Home</a>
+</body>
+</html>

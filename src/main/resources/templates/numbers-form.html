@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Number Input Form</title>
+</head>
+<body>
+<h1>Enter Two Numbers for the XOR gate:</h1>
+<form action="#" th:action="@{/numbers}" method="post">
+    <p>Number 1: <input type="number" name="number1" required="required" /></p>
+    <p>Number 2: <input type="number" name="number2" required="required" /></p>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result of Bank customer staying or not</title>
+</head>
+<body>
+<h1>Result of bank customer prediction:</h1>
+<p th:text="'Creditscore: ' + ${number1}"></p>
+<p th:text="'Age: ' + ${number2}"></p>
+<p th:text="'rest is ommited...'"></p>
+
+<p th:text="'Prediction: ' + ${bankpredic}"></p>
+<a href="/bank">Try again</a>
+<a href="/">Home</a>
+</body>
+</html>
