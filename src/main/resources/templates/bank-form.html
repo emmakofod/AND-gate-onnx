@@ -4,22 +4,98 @@
     <title>Bank Customer Prediction</title>
 </head>
 <body>
-<h2>Enter values for the bank customer staying or not:</h2>
+<h2>Enter the details to predict whether the bank customer will stay or leave:</h2>
 <form action="#" th:action="@{/bank}" method="post">
-    <p>CreditScore: <input type="number" name="number1" required th:value="707" /></p>
-    <p>Age: <input type="number" name="number2" required th:value="51" /></p>
-    <p>Tenure: <input type="number" name="number3" required th:value="10"/></p>
-    <p>Balance: <input type="number" name="number4" required th:value="98438"/></p>
-    <p>NumOfProducts: <input type="number" name="number5" required th:value="1" /></p>
-    <p>HasCrCard: <input type="number" name="number6" required th:value="0"/></p>
-    <p>IsActiveMember: <input type="number" name="number7" required th:value="0"/></p>
-    <p>EstimatedSalary: <input type="number" name="number8" required th:value="70778"/></p>
-    <p>Geography_France: <input type="number" name="number9" required th:value="0"/></p>
-    <p>Geography_Germany: <input type="number" name="number10" required th:value="1"/></p>
-    <p>Geography_Spain: <input type="number" name="number11" required th:value="0"/></p>
-    <p>Gender_Female: <input type="number" name="number12" required th:value="1"/></p>
-    <p>Gender_Male: <input type="number" name="number13" required th:value="0"/></p>
-    <p><input type="submit" value="Submit" /></p>
+    <p>
+        <label for="creditScore">Credit Score:</label>
+        <input type="number" id="creditScore" name="number1" required th:value="707" placeholder="Enter Credit Score (e.g., 707)" />
+    </p>
+
+    <p>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="number2" required th:value="51" placeholder="Enter Age (e.g., 51)" />
+    </p>
+
+    <p>
+        <label for="tenure">Tenure (in years):</label>
+        <input type="number" id="tenure" name="number3" required th:value="10" placeholder="Enter Tenure (e.g., 10)" />
+    </p>
+
+    <p>
+        <label for="balance">Account Balance:</label>
+        <input type="number" id="balance" name="number4" required th:value="98438" placeholder="Enter Balance (e.g., 98438)" />
+    </p>
+
+    <p>
+        <label for="numOfProducts">Number of Products:</label>
+        <input type="number" id="numOfProducts" name="number5" required th:value="1" placeholder="Enter Number of Products (e.g., 1)" />
+    </p>
+
+    <p>
+        <label for="hasCrCard">Has Credit Card:</label>
+        <select id="hasCrCard" name="number6" required>
+            <option value="1" th:selected="${hasCrCard == 1}">Yes</option>
+            <option value="0" th:selected="${hasCrCard == 0}">No</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="isActiveMember">Is Active Member:</label>
+        <select id="isActiveMember" name="number7" required>
+            <option value="1" th:selected="${isActiveMember == 1}">Yes</option>
+            <option value="0" th:selected="${isActiveMember == 0}">No</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="estimatedSalary">Estimated Salary:</label>
+        <input type="number" id="estimatedSalary" name="number8" required th:value="70778" placeholder="Enter Estimated Salary (e.g., 70778)" />
+        <small>Currency: USD</small> <!-- You can change the currency if needed -->
+    </p>
+
+    <p>
+        <label for="geographyFrance">Geography (France):</label>
+        <select id="geographyFrance" name="number9" required>
+            <option value="1" th:selected="${geographyFrance == 1}">Yes</option>
+            <option value="0" th:selected="${geographyFrance == 0}">No</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="geographyGermany">Geography (Germany):</label>
+        <select id="geographyGermany" name="number10" required>
+            <option value="1" th:selected="${geographyGermany == 1}">Yes</option>
+            <option value="0" th:selected="${geographyGermany == 0}">No</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="geographySpain">Geography (Spain):</label>
+        <select id="geographySpain" name="number11" required>
+            <option value="1" th:selected="${geographySpain == 1}">Yes</option>
+            <option value="0" th:selected="${geographySpain == 0}">No</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="genderFemale">Gender (Female):</label>
+        <select id="genderFemale" name="number12" required>
+            <option value="1" th:selected="${genderFemale == 1}">Yes</option>
+            <option value="0" th:selected="${genderFemale == 0}">No</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="genderMale">Gender (Male):</label>
+        <select id="genderMale" name="number13" required>
+            <option value="1" th:selected="${genderMale == 1}">Yes</option>
+            <option value="0" th:selected="${genderMale == 0}">No</option>
+        </select>
+    </p>
+
+    <p>
+        <input type="submit" value="Submit" />
+    </p>
 </form>
 </body>
 </html>

@@ -66,6 +66,7 @@ public class BankPredictionController {
         return "bankresult";
     }
 
+
     private double runInference(double[] inputFeatures) {
         String modelPath = "/bank_model.onnx";
         try (InputStream is = BankPredictionController.class.getResourceAsStream(modelPath);
